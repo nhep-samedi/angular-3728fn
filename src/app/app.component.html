@@ -1,0 +1,6 @@
+
+ <input id="filter" #filter (keyup)="tree.treeModel.filterNodes(filter.value)" placeholder="filter nodes"/>
+    <button (click)="tree.treeModel.clearFilter()">Clear Filter</button>
+    <button (click)="click(tree.treeModel)">sendData</button>
+
+    <tree-root #tree [focused]="true" [options]="options" [nodes]="nodes"></tree-root>
